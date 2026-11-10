@@ -155,9 +155,7 @@ async function copiaVerdetto() {
   if (!txt) return;
   try {
     await navigator.clipboard.writeText(txt);
-    const old = el.copy.textContent;
-    el.copy.textContent = "Copiato! ✅";
-    setTimeout(() => (el.copy.textContent = old), 1500);
+    flashLabel(el.copy, "Copiato! ✅");
   } catch {
     // Fallback per browser che bloccano clipboard.
     const ta = document.createElement("textarea");

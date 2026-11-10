@@ -37,7 +37,7 @@ async function condividi(r) {
   // Fallback: copia negli appunti.
   try {
     await navigator.clipboard.writeText(text);
-    flashCopy();
+    flashLabel(document.getElementById("share"), "Copiato! ✅");
   } catch {
     // clipboard bloccata: textarea di emergenza
     const ta = document.createElement("textarea");
@@ -46,17 +46,21 @@ async function condividi(r) {
     ta.select();
     document.execCommand("copy");
     document.body.removeChild(ta);
-    flashCopy();
+    flashLabel(document.getElementById("share"), "Copiato! ✅");
   }
 }
 
-// Piccolo feedback visivo sul bottone "Condividi".
-function flashCopy() {
-  const btn = document.getElementById("share");
+// Feedback visivo su un bottone (preserva l'icona SVG interna).
+function flashLabel(btn, label) {
   if (!btn) return;
-  const old = btn.textContent;
-  btn.textContent = "Copiato! ✅";
-  setTimeout(() => (btn.textContent = old), 1500);
+  const span = btn.querySelector("span");
+  const old = span ? span.textContent : btn.textContent;
+  if (span) span.textContent = label;
+  else btn.textContent = label;
+  setTimeout(() => {
+    if (span) span.textContent = old;
+    else btn.textContent = old;
+  }, 1500);
 }
 
 // ============================================================
