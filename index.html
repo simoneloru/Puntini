@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Puntini · Il Traduttore di Indecisione</title>
+  <meta name="description" content="Smaschera gli indecisi che scrivono usando un sacco di puntini. Incolla il testo e scopri cosa intendevano davvero." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dots-bg" aria-hidden="true"></div>
+
+  <main class="app">
+    <header class="hero">
+      <div class="logo" aria-hidden="true">
+        <span class="logo-text">Puntini</span>
+        <span class="logo-dots">···</span>
+      </div>
+      <h1>Il Traduttore di <span class="accent">Indecisione</span></h1>
+      <p class="subtitle">
+        Incolla il messaggio di quella persona che non riesce a chiudere una frase…
+        e scopri cosa <em>davvero</em> voleva dire.
+      </p>
+    </header>
+
+    <section class="panel input-panel">
+      <label for="input" class="panel-label">Testo sospetto</label>
+      <textarea
+        id="input"
+        placeholder="ciao....&#10;come stai???&#10;ecco mi chiedevo se...."
+        spellcheck="false"
+      ></textarea>
+      <div class="actions">
+        <button id="analyze" class="btn btn-primary">Smaschera 🔍</button>
+        <button id="example" class="btn btn-ghost">Prova un esempio</button>
+      </div>
+      <div id="mode-hint" class="mode-hint"></div>
+    </section>
+
+    <section id="loading" class="panel loading hidden">
+      <span class="spinner" aria-hidden="true"></span>
+      <p>Interpreto i puntini…</p>
+    </section>
+
+    <section id="results" class="results hidden">
+      <div id="verdict" class="verdict"></div>
+      <ul id="lines" class="lines"></ul>
+      <div class="actions">
+        <button id="copy" class="btn btn-primary">Copia il verdetto 📋</button>
+        <button id="reset" class="btn btn-ghost">Ricomincia</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>100% statico · nessuna API key · smaschera responsabilmente 😄</p>
+    </footer>
+  </main>
+
+  <script src="traduttore.js"></script>
+  <script src="ai.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
