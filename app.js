@@ -12,6 +12,8 @@ const el = {
   example: document.getElementById("example"),
   copy: document.getElementById("copy"),
   reset: document.getElementById("reset"),
+  share: document.getElementById("share"),
+  card: document.getElementById("card"),
   loading: document.getElementById("loading"),
   results: document.getElementById("results"),
   verdict: document.getElementById("verdict"),
@@ -183,6 +185,12 @@ el.example.addEventListener("click", () => {
 });
 el.copy.addEventListener("click", copiaVerdetto);
 el.reset.addEventListener("click", reset);
+el.share.addEventListener("click", () => {
+  if (ultimoRisultato) Share.condividi(ultimoRisultato);
+});
+el.card.addEventListener("click", () => {
+  if (ultimoRisultato) Share.scaricaCard(ultimoRisultato);
+});
 
 // Invio con Ctrl+Invio / Cmd+Invio
 el.input.addEventListener("keydown", (e) => {
