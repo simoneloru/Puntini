@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1920" width="1080" height="1920">
+  <defs>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff5c8a"/>
+      <stop offset="1" stop-color="#ffb347"/>
+    </linearGradient>
+    <radialGradient id="glowTop" cx="50%" cy="0%" r="85%">
+      <stop offset="0" stop-color="#2b1b4d" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#0f0f1a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowBottom" cx="50%" cy="100%" r="85%">
+      <stop offset="0" stop-color="#1b2b4d" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#0f0f1a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="2.5" fill="#ffffff" opacity="0.07"/>
+    </pattern>
+    <filter id="blur" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="24"/>
+    </filter>
+  </defs>
+
+  <!-- sfondo -->
+  <rect width="1080" height="1920" fill="#0f0f1a"/>
+  <rect width="1080" height="1920" fill="url(#glowTop)"/>
+  <rect width="1080" height="1920" fill="url(#glowBottom)"/>
+  <rect width="1080" height="1920" fill="url(#grid)"/>
+
+  <!-- tre puntini decorativi (il logo) -->
+  <g>
+    <circle cx="420" cy="470" r="34" fill="url(#brand)" filter="url(#blur)" opacity="0.75"/>
+    <circle cx="540" cy="400" r="44" fill="url(#brand)" filter="url(#blur)" opacity="0.75"/>
+    <circle cx="660" cy="470" r="34" fill="url(#brand)" filter="url(#blur)" opacity="0.75"/>
+    <circle cx="420" cy="470" r="26" fill="url(#brand)"/>
+    <circle cx="540" cy="400" r="36" fill="url(#brand)"/>
+    <circle cx="660" cy="470" r="26" fill="url(#brand)"/>
+  </g>
+
+  <!-- titolo -->
+  <text x="540" y="700" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="150" font-weight="800" letter-spacing="-2" fill="url(#brand)">Puntini</text>
+  <text x="540" y="782" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="52" letter-spacing="1" fill="#9a9ab5">Il Traduttore di Indecisione</text>
+
+  <!-- bolla esempio -->
+  <g>
+    <rect x="110" y="950" width="860" height="430" rx="40" fill="#1e1e33" stroke="#33334d" stroke-width="2"/>
+    <text x="150" y="1040" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="600" fill="#f0f0f7">“ciao.... come stai???”</text>
+    <text x="150" y="1105" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="600" fill="#f0f0f7">“ecco mi chiedevo se....”</text>
+    <line x1="150" y1="1150" x2="930" y2="1150" stroke="#33334d" stroke-width="2"/>
+    <text x="150" y="1220" font-family="Segoe UI, Arial, sans-serif" font-size="40" fill="#6ee7b7">→ “sta per chiederti un favore</text>
+    <text x="150" y="1280" font-family="Segoe UI, Arial, sans-serif" font-size="40" fill="#6ee7b7">   e spera che tu lo anticipi”</text>
+  </g>
+
+  <!-- CTA -->
+  <text x="540" y="1520" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="700" fill="#ffffff">Smaschera gli indecisi 😄</text>
+  <rect x="280" y="1600" width="520" height="128" rx="64" fill="url(#brand)"/>
+  <text x="540" y="1682" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="50" font-weight="800" fill="#1a0b12">Provalo gratis</text>
+
+  <text x="540" y="1850" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="34" letter-spacing="2" fill="#55556e">simoneloru.github.io/Puntini</text>
+</svg>
